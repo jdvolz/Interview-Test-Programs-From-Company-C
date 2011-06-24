@@ -1,7 +1,7 @@
 def remove(orig, all_words)  #returns the array of good words
 	results = []
 	(0..orig.length-1).each do |position|
-		temp = orig[0,position]+orig[position+1,orig.length-position]
+		temp = orig[0,position]+orig[position+1,orig.length-position-1]
 		results << temp if all_words.has_key?(temp)
 	end
 	results
